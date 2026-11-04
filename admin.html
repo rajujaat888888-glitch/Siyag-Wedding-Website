@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Admin Panel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>सियाग परिवार</h1>
+    <p>Admin Panel - व्यक्तिगत निमंत्रण लिंक</p>
+</header>
+
+<main class="admin-box">
+
+    <h2>मेहमान का नाम लिखें</h2>
+
+    <input
+        type="text"
+        id="guestName"
+        placeholder="जैसे: रामलाल जी"
+        autocomplete="off"
+    >
+
+    <button onclick="makeInvitation()">
+        व्यक्तिगत लिंक बनाएँ
+    </button>
+
+    <div class="card" id="result">
+
+        <h3>आपका निमंत्रण लिंक तैयार है!</h3>
+
+        <p id="generatedLink"></p>
+
+        <button onclick="copyInvitationLink()">
+            लिंक कॉपी करें
+        </button>
+
+        <button onclick="shareOnWhatsApp()">
+            WhatsApp पर भेजें
+        </button>
+
+    </div>
+
+    <p>
+        मेहमान को केवल उसका व्यक्तिगत होमपेज लिंक भेजें।
+        Admin पेज का लिंक साझा न करें।
+    </p>
+
+</main>
+
+<section class="countdown">
+    <h2>शुभ विवाह में शेष समय</h2>
+    <div id="timer"></div>
+</section>
+
+<footer>Admin Panel</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
